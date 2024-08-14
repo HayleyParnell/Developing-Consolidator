@@ -1,0 +1,74 @@
+{
+    "level1": {
+        "columns": [
+            "Social Security Number",
+            "First Name or Initial",
+            "Middle Name or Initial",
+            "Last Name",
+            "Suffix",
+            "Date of Birth"
+        ],
+        "aggregation_functions": {
+            "Full Address": "join_unique_address",
+            "Financial Account Number": "join_unique",
+            "Driver's License Number / State ID Number": "first",
+            "PII": "first",
+            "Associated Docs (People)": "join_unique", 
+            "People Tracker Control Number": "first"
+        }
+    },
+    "level2": {
+        "columns": [
+            "Social Security Number",
+            "First Name or Initial",
+            "Middle Name or Initial",
+            "Last Name",
+            "Suffix"
+        ],
+        "aggregation_functions": {
+            "Date of Birth": "join_unique",
+            "Full Address": "join_unique_address",
+            "Financial Account Number": "join_unique",
+            "Driver's License Number / State ID Number": "first",
+            "PII": "first",
+            "Associated Docs (People)": "join_unique",
+            "People Tracker Control Number": "first"
+        }
+    },
+    "level3": {
+        "columns": [
+            "Social Security Number",
+            "Last Name",
+            "Suffix"
+        ],
+        "aggregation_functions": {
+            "Middle Name or Initial": "join_unique",
+            "First Name or Initial": "join_unique",
+            "Date of Birth": "join_unique",
+            "Full Address": "join_unique_address",
+            "Financial Account Number": "join_unique",
+            "Driver's License Number / State ID Number": "first",
+            "PII": "first",
+            "Associated Docs (People)": "join_unique",
+            "People Tracker Control Number": "first"
+        }
+    },
+    "level4": {
+        "columns": [
+            "Social Security Number",
+            "First Name or Initial"
+        ],
+        "aggregation_functions": {
+            "Middle Name or Initial": "join_unique",
+            "Last Name": "join_unique",
+            "Suffix": "first",
+            "Full Address": "join_unique_address",
+            "Financial Account Number": "join_unique",
+            "Driver's License Number / State ID Number": "first",
+            "PII": "first",
+            "Associated Docs (People)": "join_unique",
+            "People Tracker Control Number": "first",
+            "Date of Birth": "join_unique"
+        }
+    }
+}

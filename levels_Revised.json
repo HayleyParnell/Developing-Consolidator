@@ -1,0 +1,29 @@
+{
+    "level1": {
+        "columns": [
+            "Social Security Number",
+            "First Name or Initial",
+            "Middle Name or Initial",
+            "Last Name",
+            "Suffix",
+            "Date of Birth"
+        ],
+        "aggregation_functions": {
+            "Address": "first",
+            "City": "first",
+            "State": "first",
+            "ZIP Code": "first",
+            "Country (if not USA)": "first",
+            "Financial Account Number": "join_unique",
+            "Driver's License Number / State ID Number": "join_unique",
+            "PII": "join_unique",
+            "Associated Docs (People)": "join_unique", 
+            "People Tracker Control Number": "join_unique"
+        }
+    }
+}
+
+    
+
+
+
